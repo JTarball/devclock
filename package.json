@@ -2,9 +2,10 @@
   "name": "devclock",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://yld0.github.io/devclock",
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "next build && cp -r out build",
     "start": "next start",
     "lint": "eslint"
   },
