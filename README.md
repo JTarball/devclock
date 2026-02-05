@@ -45,6 +45,15 @@ To build locally with the same base path as production:
 PAGES_BASE_PATH=/devclock npm run build
 ```
 
+### Ticket stats (closed issues)
+
+The page can show how many closed issues **jtarball** and **nbettencourt** have in a GitHub repo (counts are by issue author, fetched at build time).
+
+- **GITHUB_REPO** – Set to the repo to count issues in (e.g. `owner/reponame`). In CI, use **Settings → Secrets and variables → Actions → Variables** and add `GITHUB_REPO`. If unset, the ticket section is hidden.
+- **GITHUB_TOKEN** – Optional. In CI this is usually set automatically; you can rely on the default `GITHUB_TOKEN` for higher rate limits. For a private repo, use a token with access.
+
+Numbers are closed issues in that repo, by author.
+
 ## Deploy on Vercel
 
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
