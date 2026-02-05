@@ -47,7 +47,7 @@ jobs:
         env:
           PAGES_BASE_PATH: ${{ steps.setup_pages.outputs.base_path }}
           GITHUB_REPO: yld0/frontend
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GH_PAGES_STATS_TOKEN }}
 
       - name: Add .nojekyll for static asset serving
         run: touch out/.nojekyll
